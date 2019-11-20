@@ -143,3 +143,30 @@ return largest
 }
 
 largestEvenNumber([2, 11, 56, 100, 2, -2, 1029])
+
+
+
+// Extra Practice
+
+function guessLetter(letter){
+    const wordLetters     = ['S', 'H', 'A', 'H', 'A', 'D'];
+    let guessedLetters  = ['_', '_', '_', '_', '_', '_'];
+
+for (let i = 0 ; i < wordLetters[i].length ; i++){
+    if (wordLetters[i] == letter){
+        guessLetter[i] = wordLetters[i]
+        console.log(`Correct, ${guessLetter}`)
+        // if (!guessLetter.includes('_')){
+        //     console.log(`You Win, ${guessLetter}`)
+        // }
+    }// end if
+    else {
+        console.log(`Incorrect, ${guessLetter}`)
+    }
+    
+} // end for
+
+
+}
+
+guessLetter("S")
