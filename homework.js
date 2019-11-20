@@ -23,7 +23,8 @@ return total
     }
     return even
 }
-//console.log("the total is :" + sumEven(8))
+//console.log("the total is :" + sumEven(8))  
+
 
 let x = [8,2.2,4]
 let totalSum = 0
