@@ -153,7 +153,7 @@ function countUpAndDown(number) {
     output += `${i} `;
   }
 
-  for (let i = 3; i > 0; i--) {
+  for (let i = number - 1; i > 0; i--) {
     if (i === 1) {
       output += `${i}`;
     } else {
