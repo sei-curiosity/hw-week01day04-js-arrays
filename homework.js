@@ -145,3 +145,23 @@ function largestEvenNumer(numbers) {
 }
 
 largestEvenNumer([1, 2, 3, 10, 4, 7, 0]);
+
+function countUpAndDown(number) {
+  let output = "";
+
+  for (let i = 1; i <= 3; i++) {
+    output += `${i} `;
+  }
+
+  for (let i = 3; i > 0; i--) {
+    if (i === 1) {
+      output += `${i}`;
+    } else {
+      output += `${i} `;
+    }
+  }
+
+  console.log(output);
+}
+
+countUpAndDown(3);
