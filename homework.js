@@ -147,26 +147,38 @@ largestEvenNumber([2, 11, 56, 100, 2, -2, 1029])
 
 
 // Extra Practice
+ const wordLetters     = ['S', 'H', 'A', 'H', 'A', 'D']; // Assuming it's global arrays
+ let guessedLetters  = ['_', '_', '_', '_', '_', '_'];
 
 function guessLetter(letter){
-    const wordLetters     = ['S', 'H', 'A', 'H', 'A', 'D'];
-    let guessedLetters  = ['_', '_', '_', '_', '_', '_'];
+   
+    if (guessedLetters.includes('_')){
+   //console.log("You still gotta continue the game")
+   
+        for (let i = 0 ; i < wordLetters.length ; i++){
+            if (wordLetters[i] == letter){ //wordLetters[i] == letter
+                guessedLetters[i] = wordLetters[i] // it's not reflecting on the array globally :(
+                console.log(`Correct ${guessedLetters}`)
+                
+            }// end if
+            
+    }//end 2nd for
 
-for (let i = 0 ; i < wordLetters[i].length ; i++){
-    if (wordLetters[i] == letter){
-        guessLetter[i] = wordLetters[i]
-        console.log(`Correct, ${guessLetter}`)
-        // if (!guessLetter.includes('_')){
-        //     console.log(`You Win, ${guessLetter}`)
-        // }
-    }// end if
-    else {
-        console.log(`Incorrect, ${guessLetter}`)
-    }
+
+}// end if
+
+
+else if (!guessedLetters.includes(letter)){
+    console.log(`Incorrect ${guessedLetters}`)
     
-} // end for
-
-
 }
 
-guessLetter("S")
+else {
+    console.log(`You win! ${guessedLetters}`)
+}
+
+
+} // end function
+
+guessLetter("A")
+
